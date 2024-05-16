@@ -25,12 +25,10 @@ sasl.mechanism=...
 security.protocol=...
 ```
 
-```properties
+And run the following command:
 
-```
-
+```bash
 mvn=install
 java=-cp java -cp utils/target/utils-1.0-SNAPSHOT.jar com.github.prametta.utils.MigrateACLs source_client.properties
 dest_client.properties
-
 ```

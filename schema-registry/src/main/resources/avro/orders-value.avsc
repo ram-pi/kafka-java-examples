@@ -1,0 +1,78 @@
+{
+  "type": "record",
+  "name": "Order",
+  "namespace": "io.confluent.prametta.model",
+  "fields": [
+    {
+      "name": "ordertime",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "orderid",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "itemid",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "orderunits",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null
+    },
+    {
+      "name": "address",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "Address",
+          "fields": [
+            {
+              "name": "city",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "state",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "zipcode",
+              "type": [
+                "null",
+                "long"
+              ],
+              "default": null
+            }
+          ],
+          "connect.name": "io.confluent.prametta.model"
+        }
+      ],
+      "default": null
+    }
+  ],
+  "connect.name": "io.confluent.prametta.model"
+}

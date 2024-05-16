@@ -1,0 +1,25 @@
+{
+  "schemas" : [ {
+    "schema" : {
+      "type" : "record",
+      "name" : "Schema",
+      "fields" : [ {
+        "name" : "hop",
+        "type" : "string"
+      }, {
+        "name" : "malt",
+        "type" : "string"
+      }, {
+        "name" : "name",
+        "type" : "string"
+      }, {
+        "name" : "style",
+        "type" : "string"
+      }, {
+        "name" : "yeast",
+        "type" : "string"
+      } ]
+    },
+    "messagesMatched" : [ 0, 1, 2, 3, 4 ]
+  } ]
+}

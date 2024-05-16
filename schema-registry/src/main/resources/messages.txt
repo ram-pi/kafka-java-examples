@@ -1,0 +1,5 @@
+{"hop":"Sterling","malt":"Rye malt","name":"Racer 5 India Pale Ale, Bear Republic Bre","style":"Wood-aged Beer","yeast":"1272 - American Ale II"}
+{"hop":"Yakima Gol","malt":"Munich","name":"Racer 5 India Pale Ale, Bear Republic Bre","style":"Belgian And French Ale","yeast":"3638 - Bavarian Wheat"}
+{"hop":"Brewer’s Gold","malt":"Caramel","name":"Bourbon County Stout","style":"Pilsner","yeast":"3522 - Belgian Ardennes"}
+{"hop":"Crystal","malt":"Black malt","name":"90 Minute IPA","style":"Belgian And French Ale","yeast":"2308 - Munich Lager"}
+{"hop":"Equinox","malt":"Chocolate malt","name":"Kirin Inchiban","style":"English Pale Ale","yeast":"1187 - Ringwood Ale"}

@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "hop": {
+      "type": "string"
+    },
+    "malt": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "style": {
+      "type": "string"
+    },
+    "yeast": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "hop",
+    "malt",
+    "name",
+    "style",
+    "yeast"
+  ],
+  "additionalProperties": true
+}

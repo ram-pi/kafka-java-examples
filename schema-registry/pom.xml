@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.github.prametta</groupId>
+        <artifactId>kafka-examples</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>schema-registry</artifactId>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <kafka-schema-registry-maven-plugin.version>7.5.0</kafka-schema-registry-maven-plugin.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.prametta</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.confluent</groupId>
+                <artifactId>kafka-schema-registry-maven-plugin</artifactId>
+                <version>${kafka-schema-registry-maven-plugin.version}</version>
+                <configuration>
+                    <schemaRegistryUrls>
+                        <param>http://localhost:8081</param>
+                    </schemaRegistryUrls>
+                    <!-- derive-schema -->
+                    <messagePath>src/main/resources/messages.txt</messagePath>
+                    <schemaType>avro</schemaType>
+                    <outputPath>src/main/resources/schemas.json</outputPath>
+                    <!-- derive-schema -->
+                    <previousSchemaPaths/>
+                    <compatibilityLevels/>
+                    <schemas/>
+                </configuration>
+                <executions>
+                    <!-- Validate -->
+                    <!--
+                        <execution>
+                            <id>validate</id>
+                            <phase>validate</phase>
+                            <goals>
+                                <goal>validate</goal>
+                            </goals>
+                            <configuration>
+                                <subjects>
+                                    <beers-value>src/main/resources/avro/beers.avsc</beers-value>
+                                </subjects>
+                                <schemaTypes>
+                                    <beers-value>AVRO</beers-value>
+                                </schemaTypes>
+                            </configuration>
+                        </execution>
+                        -->
+                    <!-- Register -->
+                    <!--
+                    <execution>
+                        <id>register</id>
+                        <goals>
+                            <goal>register</goal>
+                        </goals>
+                        <configuration>
+                            <subjects>
+                                <beers-value>src/main/resources/avro/beers.avsc</beers-value>
+                            </subjects>
+                            <schemaTypes>
+                                <beers-value>AVRO</beers-value>
+                            </schemaTypes>
+                        </configuration>
+                    </execution>
+                    -->
+                </executions>
+            </plugin>
+            <!-- Avro maven plugin
+            <plugin>
+                <groupId>org.apache.avro</groupId>
+                <artifactId>avro-maven-plugin</artifactId>
+                <version>${avro.version}</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>schema</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <sourceDirectory>${project.basedir}/src/main/resources/avro</sourceDirectory>
+                    <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                    <stringType>String</stringType>
+                </configuration>
+            </plugin>
+            -->
+        </plugins>
+    </build>
+</project>

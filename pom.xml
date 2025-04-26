@@ -16,16 +16,18 @@
         <module>streams</module>
         <module>flink</module>
         <module>utils</module>
+        <module>connect-smts</module>
+        <module>flink-UDFs</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <kafka.version>3.6.0</kafka.version>
-        <confluent.version>7.6.0</confluent.version>
+        <kafka.version>3.9.0</kafka.version>
+        <confluent.version>7.9.0</confluent.version>
         <log4j2.version>2.17.1</log4j2.version>
-        <lombok.version>1.18.26</lombok.version>
+        <lombok.version>1.18.34</lombok.version>
         <avro.version>1.11.1</avro.version>
         <picocli.version>4.7.1</picocli.version>
         <slf4j.version>2.0.6</slf4j.version>

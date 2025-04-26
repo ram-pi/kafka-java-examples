@@ -45,6 +45,8 @@ public class MyProducer implements Callback, Runnable {
         Properties props = Utils.loadProps("client.properties");
         props.setProperty(ProducerConfig.LINGER_MS_CONFIG, String.valueOf(0));
 
+
+
         // print properties
         log.info("Properties: {}", props);
 

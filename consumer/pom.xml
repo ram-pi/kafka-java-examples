@@ -23,6 +23,26 @@
             <artifactId>common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!-- Consumer Interceptor -->
+        <dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>timestamp-interceptor</artifactId>
+            <version>${confluent.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.confluent.cloud</groupId>
+                    <artifactId>events-schema</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>io.confluent.observability</groupId>
+                    <artifactId>telemetry-client</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>io.confluent.observability</groupId>
+                    <artifactId>telemetry-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
 
 </project>
